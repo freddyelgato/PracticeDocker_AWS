@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Definir el conjunto de caracteres para la página -->
+    <meta charset="UTF-8">
+    <!-- Hacer que la página sea responsiva en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Exercise</title>
+
+    <style>
+        /* Estilos globales para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif; /* Fuente sencilla */
+            display: flex; /* Usamos Flexbox para centrar el contenido */
+            justify-content: center; /* Centrado horizontal */
+            align-items: center; /* Centrado vertical */
+            height: 100vh; /* Altura completa de la ventana */
+            margin: 0; /* Quitamos márgenes por defecto */
+            background-color: #f4f4f4; /* Color de fondo gris claro */
+        }
+
+        /* Estilo para el cuadro motivador */
+        .motivational-box {
+            background-color: yellow; /* Fondo amarillo */
+            color: black; /* Texto en color negro */
+            border: 5px solid black; /* Borde negro de 5px */
+            padding: 30px; /* Espaciado interno de 30px */
+            text-align: center; /* Centrado del texto dentro del cuadro */
+            font-size: 24px; /* Tamaño de fuente grande */
+            font-weight: bold; /* Texto en negrita */
+            width: 300px; /* Ancho fijo del cuadro */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cuadro motivador con la frase dentro -->
+    <div class="motivational-box">
+        "The only bad workout is the one that didn’t happen."
+        <h4>Local IP: {{ .LocalIP }}</h4>
+    </div>
+    
+
+</body>
+</html>
