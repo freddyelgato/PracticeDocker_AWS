@@ -43,10 +43,11 @@ jobs:
             username: ${{ secrets.EC2_USER }}
             key: ${{ secrets.EC2_SSH_KEY }}
             script: |
-                sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
+                script: |
+                sudo docker stop go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker rm go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker pull 2424833f/go_docker_main:latest
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main:latest
 
       - name: Executing remote ssh commands ec2 2
         uses: appleboy/ssh-action@master
@@ -55,10 +56,11 @@ jobs:
             username: ${{ secrets.EC2_USER }}
             key: ${{ secrets.EC2_SSH_KEY }}
             script: |
-                sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
+                sudo docker stop go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker rm go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker pull 2424833f/go_docker_main:latest
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main:latest
+                
       - name: Executing remote ssh commands ec2 3
         uses: appleboy/ssh-action@master
         with:
@@ -66,10 +68,11 @@ jobs:
             username: ${{ secrets.EC2_USER }}
             key: ${{ secrets.EC2_SSH_KEY }}
             script: |
-                sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
+                sudo docker stop go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker rm go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker pull 2424833f/go_docker_main:latest
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main:latest
+
       - name: Executing remote ssh commands ec2 4
         uses: appleboy/ssh-action@master
         with:
@@ -77,10 +80,8 @@ jobs:
             username: ${{ secrets.EC2_USER }}
             key: ${{ secrets.EC2_SSH_KEY }}
             script: |
-                sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
-                sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
-
-                
+                sudo docker stop go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker rm go_ec2_Docker_mainp || echo "No existing process found"
+                sudo docker pull 2424833f/go_docker_main:latest
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main:latest
                 
