@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: 2424833f/go_docker_main:latest
+          tags: 2424833f/go_docker_mainp:latest
 
       - name: Check out the code
         uses: actions/checkout@v3
@@ -46,7 +46,7 @@ jobs:
                 sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_main 2424833f/go_docker_main
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
 
       - name: Executing remote ssh commands ec2 2
         uses: appleboy/ssh-action@master
@@ -58,7 +58,7 @@ jobs:
                 sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_main 2424833f/go_docker_main
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
       - name: Executing remote ssh commands ec2 3
         uses: appleboy/ssh-action@master
         with:
@@ -69,7 +69,7 @@ jobs:
                 sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_main 2424833f/go_docker_main
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
       - name: Executing remote ssh commands ec2 4
         uses: appleboy/ssh-action@master
         with:
@@ -80,7 +80,7 @@ jobs:
                 sudo docker stop go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker rm go_ec2-docker-prod  || echo "No existing process found"
                 sudo docker pull mates182/go_ec2-docker-prod:latest
-                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_main 2424833f/go_docker_main
+                sudo docker run --network=host -d -p 80:80 --name go_ec2_Docker_mainp 2424833f/go_docker_main
 
                 
                 
